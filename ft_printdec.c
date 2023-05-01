@@ -6,7 +6,7 @@
 /*   By: palucena <palucena@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 20:47:09 by palucena          #+#    #+#             */
-/*   Updated: 2023/04/30 21:06:06 by palucena         ###   ########.fr       */
+/*   Updated: 2023/05/01 13:57:48 by palucena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,26 +25,26 @@ void	ft_putnbr(int nb)
 		ft_putchar('-');
 		nb *= -1;
 	}
-	if (nb >= 10)
+	if (nb >= 0 && nb <= 9)
+		ft_putchar(nb + '0');
+	else
 	{
 		ft_putnbr(nb / 10);
 		ft_putnbr(nb % 10);
-	}
-	else
-		ft_putchar(nb + '0');
+	}		
 }
 
 static int	ft_dcount(long int nb)
 {
 	int	i;
 
-	i = 1;
+	i = 0;
 	while (nb >= 10)
 	{
 		nb /= 10;
 		i++;
 	}
-	return (i);
+	return (i + 1);
 }
 
 int	ft_printdec(int nb)
@@ -54,7 +54,7 @@ int	ft_printdec(int nb)
 	c = 0;
 	ft_putnbr(nb);
 	if (nb >= 0)
-		return (ft_dcount(c));
+		return (ft_dcount(nb));
 	c = (long int)nb * (-1);
 	return (ft_dcount(c) + 1);
 }

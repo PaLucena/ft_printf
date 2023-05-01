@@ -6,7 +6,7 @@
 /*   By: palucena <palucena@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 19:11:52 by palucena          #+#    #+#             */
-/*   Updated: 2023/04/30 21:45:07 by palucena         ###   ########.fr       */
+/*   Updated: 2023/05/01 13:39:50 by palucena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	ft_printf(char const *content, ...)
 	while (content[i])
 	{
 		if (content[i] != '%')
-			ft_putchar(content[i]);
+			c += ft_printchar(content[i]);
 		else
 		{
 			i++;

@@ -6,7 +6,7 @@
 /*   By: palucena <palucena@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 19:32:00 by palucena          #+#    #+#             */
-/*   Updated: 2023/04/30 21:47:57 by palucena         ###   ########.fr       */
+/*   Updated: 2023/05/01 14:05:11 by palucena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ int	ft_printhexa(unsigned long long nb, char ch)
 	if (nb >= 16)
 		c += ft_printhexa(nb / 16, ch);
 	if (ch == 'x')
-		ft_putchar("0123456789abcef"[nb % 16]);
+		ft_printchar("0123456789abcdef"[nb % 16]);
 	else if (ch == 'X')
-		ft_putchar("0123456789ABCDEF"[nb % 16]);
+		ft_printchar("0123456789ABCDEF"[nb % 16]);
+	c++;
 	return (c);
 }
