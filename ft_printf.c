@@ -6,7 +6,7 @@
 /*   By: palucena <palucena@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 19:11:52 by palucena          #+#    #+#             */
-/*   Updated: 2023/05/02 15:00:03 by palucena         ###   ########.fr       */
+/*   Updated: 2023/06/13 11:40:44 by palucena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,6 @@ int	ft_printf(char const *content, ...)
 
 	i = 0;
 	c = 0;
-	if (write(0, "", 0) == -1)
-		return (-1);
 	va_start(params, content);
 	while (content[i])
 	{
