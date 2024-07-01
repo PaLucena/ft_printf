@@ -1,5 +1,5 @@
 
-<h1>ft_printf</h1>
+<h1 align="center">ft_printf</h1>
 
 <h2>Description</h2>
 <p><strong>ft_printf</strong> is a project from the 42 cursus that involves re-creating the C library function <code>printf</code>. The main objective is to understand the inner workings of this essential function, including variadic functions, format specifiers, and buffer management. The project requires implementing a custom <code>ft_printf</code> function that mimics the behavior of the standard <code>printf</code>.</p>
